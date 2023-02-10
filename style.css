@@ -1,12 +1,3 @@
-Before {
-  color: White;
-  font-family: 'Fredoka One', cursive;
-  font-size: clamp(2em, 2vw, 4em);
-  font-weight: 400;
-  margin: 0px;
-  align: right;
-
-
 body {
   background-color: rgb(10, 10, 10);
   margin: 0px;
