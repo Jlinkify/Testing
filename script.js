@@ -1,6 +1,7 @@
  new kursor({
             type: 1,
             removeDefaultCursor: true
+ })
 
 document.getElementById("cards").onmousemove = e => {
   for(const card of document.getElementsByClassName("card")) {
