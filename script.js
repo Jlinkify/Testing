@@ -1,22 +1,10 @@
-const nav = document.getElementById("nav");
+document.getElementById("cards").onmousemove = e => {
+  for(const card of document.getElementsByClassName("card")) {
+    const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
 
-for(const link of nav.getElementsByTagName("a")) {  
-  link.onmousemove = e => {
-    const rect = link.getBoundingClientRect(),    
-          img = link.querySelector("img");
-    
-    img.style.left = `${e.clientX - rect.left}px`;
-    img.style.top = `${e.clientY - rect.top}px`;
-  }
-}
-
-window.onmousemove = e => {
-  const percent = e.clientY / window.innerHeight;
-  
-  nav.animate({
-    transform: `translateY(${percent * nav.offsetHeight * -1}px)`
-  }, {
-    fill: "forwards",
-    duration: 4000
-  })
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
 }
