@@ -1,0 +1,330 @@
+/* CSS for /projects */
+body {
+  font-family: sans-serif;
+  font-size: "25px";
+  color: #ffffff;
+  text-align: left;
+  background-color: #1c1c1c;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+  color: #0084ff;
+}
+
+.navbar {
+  position: fixed;
+  background-color: #1c1c1c;
+  transition: width 600ms ease;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  z-index: 9999;
+}
+
+.nav-item {
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+  z-index: 9999;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+  z-index: 9999;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  z-index: 9999;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  z-index: 9999;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  z-index: 9999;
+}
+
+.fa-primary {
+  color: #ff7eee;
+  z-index: 9999;
+}
+
+.fa-secondary {
+  color: #df49a6;
+  z-index: 9999;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+  z-index: 9999;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+  z-index: 9999;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+  z-index: 9999;
+}
+
+.logo-text
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+  z-index: 9999;
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+  z-index: 9999;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    z-index: 9999;
+  }
+
+  .logo {
+    display: none;
+    z-index: 9999;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    z-index: 9999;
+  }
+
+  .nav-link {
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  main {
+    margin: 0;
+    z-index: 9999;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    z-index: 9999;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+    z-index: 9999;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+    z-index: 9999;
+  }
+
+  .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+    z-index: 9999;
+  }
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+    z-index: 9999;
+  }
+}
+
+.dark {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  z-index: 9999;
+}
+
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #e4e4e4;
+  z-index: 9999;
+}
+
+.solar {
+  --text-primary: #576e75;
+  --text-secondary: #35535c;
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #f5e5b8;
+  z-index: 9999;
+}
+
+.theme-icon {
+  display: none;
+  z-index: 9999;
+}
+
+.dark #darkIcon {
+  display: block;
+  z-index: 9999;
+}
+
+.light #lightIcon {
+  display: block;
+  z-index: 9999;
+}
+
+.solar #solarIcon {
+  display: block;
+  z-index: 9999;
+}
+
+.text-center {
+  text-align: center;
+  z-index: 9999;
+}
+.game-link {
+  height: 400px;
+  width: 300px;
+}
+.game-tile {
+  background-color: #949494;
+  height: 400px;
+  width: 300px;
+  color: #ffffff;
+  border-radius: 30px;
+  -webkit-animation: scale-down-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-down-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.game-tile:hover {
+  text-decoration: none;
+  -webkit-animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.game-icon {
+  border-radius: 30px;
+  width: 300px;
+  height: 300px;
+}
+.game-title {
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  order: 0;
+  flex-grow: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  padding: 10px;
+}
+.badge {
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+#mySearch {
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  padding: 11px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  background-color: rgb(53, 53, 53);
+}
